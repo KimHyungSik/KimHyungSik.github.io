@@ -6,17 +6,15 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: 형식적블로그
+email: colrog968@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  형식적으로 작성하는 김형식 개발 블로그
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "" # the base hostname & protocol for your site
 
 social_sharing: true
-github_username:  jekyll
+github_username:  KimHyungSik
 google_analytic_id:
 disqus_name:
 permalink: /:year/:month/:day/:title:output_ext
@@ -47,7 +45,7 @@ jekyll-archives:
 # jekyll seo tag settings
 logo: assets/images/example-image.png
 twitter:
-  username: jekyllrb
+  username: KimHyungSik
 
 # Build settings
 markdown: kramdown

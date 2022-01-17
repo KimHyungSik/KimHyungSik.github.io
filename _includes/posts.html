@@ -1,7 +1,7 @@
 <div class="home">
 
   <ul class="post-list">
-    {% for post in _posts %}
+    {% for post in paginator.posts %}
       <li>
         <time class="post-meta" datetime="{{ post.date | date: "%Y-%m-%d %H:%M" }}">{{ post.date | date: "%b %-d, %Y" }}</time>
 

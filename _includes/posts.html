@@ -1,7 +1,7 @@
 <div class="home">
 
   <ul class="post-list">
-    {% for post in paginator.posts %}
+    {% for post in _posts %}
       <li>
         <time class="post-meta" datetime="{{ post.date | date: "%Y-%m-%d %H:%M" }}">{{ post.date | date: "%b %-d, %Y" }}</time>
 
@@ -15,8 +15,6 @@
       </li>
     {% endfor %}
   </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
   {% include pagination.html %}
 
 </div>

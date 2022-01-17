@@ -1,0 +1,96 @@
+# ------------------------------------------------------------------------------
+# ~/_data/plugins/defaults/paginator.yml
+# Default configuration for J1 Paginator (Jekyll Paginate V2)
+#
+# Product/Info:
+# https://jekyll.one
+#
+# Copyright (C) 2021 Juergen Adams
+#
+# J1 Template is licensed under the MIT License.
+# See: https://github.com/jekyll-one-org/J1 Template/blob/master/LICENSE
+# ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+# Description (used for J1 CC only)
+#
+description:
+
+  title:                                J1 Paginator
+  scope:                                Default settings
+  location:                             _data/plugins/defaults/paginator.yml
+
+# ------------------------------------------------------------------------------
+# GENERAL plugin settings
+#
+# enabled
+# ------------------------------------------------------------------------------
+#   Enables|Disables the plugin for processing
+#
+#   values:                             true|false (boolean)
+#   default:                            false
+#
+#enabled:                                false
+
+# ------------------------------------------------------------------------------
+# User configuration settings
+#
+defaults:
+
+  # ----------------------------------------------------------------------------
+  # GENERAL paginator settings
+  #
+  # enabled
+  # ----------------------------------------------------------------------------
+  #   Enables|Disables the use of a pagination
+  #
+  # title
+  # ----------------------------------------------------------------------------
+  #   Customizable (pagination) page title
+  #
+  #   values:                           string
+  #   default:                          :title - page :num
+  #
+
+  # ----------------------------------------------------------------------------
+  # PAGINATION settings
+  #
+  pagination:
+    enabled:                            false
+
+    debug:                              false
+    title:                              :title - page :num
+    rebuild:                            true                                    # currently NOT used
+
+    permalink:                          /page:num/
+    per_page:                           10
+    limit:                              0
+    sort_field:                         date
+    sort_reverse:                       false
+    trail:
+      before:                           0
+      after:                            0
+
+  # AUTOPAGE settings
+  #
+  autopages:
+    enabled:                            false
+    rebuild:                            true                                    # currently NOT used
+
+    tags:
+      enabled:                          false
+      layouts:                          [
+                                          paginator/autopage_collections_tags.html,
+                                          paginator/autopage_tags.html
+                                        ]
+
+    categories:
+      enabled:                          false
+      layouts:                          [ paginator/autopage_category.html ]
+
+    collections:
+      enabled:                          false
+      layouts:                          [ paginator/autopage_collection.html ]
+
+# ------------------------------------------------------------------------------
+# END config

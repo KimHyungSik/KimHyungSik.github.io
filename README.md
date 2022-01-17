@@ -1,222 +1,321 @@
-# plainwhite
+# All you need for your new amazing site
 
-Simplistic jekyll portfolio-style theme for writers.
+Jekyll meets Bootstrap - and makes a lot of friends. J1 Template combines
+the best of OpenSource software for the Web and the Web site generator
+`Jekyll`. J1 is OpenSource, and so are the packaged modules - no pain for
+private or professional use. Explore this site to learn what's possible if
+you go to the Jekyll Way.
 
-**Demo**: [samarsault.com](https://samarsault.com)
+**Create powerful modern Static Webs: Secure, Flexible and Fast.**
 
-![plainwhite theme preview](/screenshot.png)
+![Screenshot](https://github.com/jekyll-one/j1-template-starter/raw/main/home-screenshot.jpg "J1 Starter Web")
 
-## Installation on Github Pages
+* Fully Responsive. J1 Template supports modern web browsers on all
+  devices for best results on PCs, Tablets, and SmartPhones.
+* Full Bootstrap V5 support. Current Technology and Design. Excellent
+  performance running desktop and mobile websites. Use Jekyll One to
+  present your content at its best.
+* Start in no time. No programming is needed to start using J1. The
+  Template provides a large number of building blocks to create modern
+  web pages in minutes.
 
-Add this line to your site's `_config.yml`:
+**Create powerful modern Static Webs: Secure, Flexible and Fast.**
 
-```yaml
-remote_theme: samarsault/plainwhite-jekyll
+Have fun!
+
+# J1 Home
+
+The template J1 can do a lot for you and maybe the base for your next web
+project. To experience more, welcome to visit the homepage of the template
+project at [jekyll.one](https://jekyll.one/).
+
+# J1 Live Demo
+
+The template comes with a Web included, a skeleton for your new Web site.
+This Web is called the **Starter Web**, a general-purpose Website scaffold to
+be modified for your needs. The built-in Starter Web [can be visited live
+at Netlify](https://j1-template-starter.netlify.app/).
+
+**Have fun exploring what a modern static web, a Jekyll site can do**!
+
+# J1 Features
+
+The template combines the best free software for the web. Jekyll One Template
+is OpenSource and the modules included are free to use as well. No license
+issues for private or professional use.
+
+* Fully Responsive. J1 Template supports modern web browsers on all
+  devices for best results on PCs, Tablets, and SmartPhones.
+* Full Bootstrap V5 support. Current Technology and Design. Excellent
+  performance running desktop and mobile websites. Use Jekyll One to
+  present your content at its best.
+* Start in no time. No programming is needed to start using J1. The
+  Template provides a large number of building blocks to create modern
+  web pages in minutes.
+
+## General
+
+* Jekyll 4.2 support
+* Ruby 2.7 support
+* Asciidoc (Asciidoctor) and Markdown support
+* Asciidoctor plugins included
+* Bootstrap V5 (v5.1.3)
+* Responsive Design
+* Material Design
+* Responsive Text
+* Responsive HTML tables
+* Compressed HTML, CSS and Javascript support
+* Themes support (Bootswatch)
+* Icon Font support (MDI, FA, Iconify, Twitter Emoji)
+* Themeable source code highlighting (Rouge)
+* Desktop and Mobile navigation ready
+* Fully configurable
+* Highest Google Lighthouse scores
+
+## Modules and Extensions
+
+* Bootstrap V5 extensions included
+* Asciidoctor extensions|plugins included
+* Smooth-Scroll support on all pages
+* Full-text search engine included (Lunr)
+* Blog Post navigation included
+* Cookie Consent module included (includes GDPR compatible OptIn/OptOut support)
+* Translator module included (includes GDPR compatible OptIn/OptOut support)
+* Advertising module included (includes GDPR compatible OptIn/OptOut support)
+* Analytics module included (includes GDPR compatible OptIn/OptOut support)
+* Clipboard module included
+* Floating Action Buttons|Menus included
+* Navigation module (multi purpose) included
+* Lightbox modules included
+* Gallery modules included
+* Carousel module included
+* Video modules included (HTML5 Video, YouTube, Vimeo)
+
+## Addons and Integrations
+
+* Featured example content included
+* Royalty free images included
+* Support of comment provider APIs (Disqus, Hyvor)
+* Google Analytics support (includes GDPR compatible OptIn/OptOut support)
+* Google Addsense support (includes GDPR compatible OptIn/OptOut support)
+* Google Translate support (includes GDPR compatible OptIn/OptOut support)
+* Deploy on Github Pages (source only), Netlify and Heroku ready
+
+# Supported platforms
+
+J1 is supported on all current x64-based OS:
+
+* Windows 10|11
+* Windows WSL 2
+* Linux, kernel version >= 4.15 (e.g. Ubuntu  18.x LTS)
+* OSX, version >= 10.10.5 (Yosemite)
+
+Note that 32-bit versions (x32) are generally NOT supported for all
+platforms.
+
+# J1 Development languages and tools
+
+To run the project for J1 Template Web, the following languages and
+tools expected to be in place with your OS:
+
+*   Ruby language, version >= 2.6 < 3.x (v2.7.x recommended)
+*   Javascript language (NodeJS), version >= 12.x < 14.x (v12.22.x recommended)
+
+## Update the package managers for _NodeJS_
+
+NodeJS comes with the package manager *NPM* pre-installed. The native CLI for
+the NodeJS package management is `npm`. Besides `npm` there's another quite
+handy CLI for NPM available: *Yarn*.
+
+The CLI `yarn` is developed at _Facebook_ and can be used as a replacement
+for `npm`. From a top-level perspective, both package management clients
+behave pretty much the *same*. The syntax `yarn` uses is shorter in writing,
+making the command-line look a bit more natural. Therefore, the use of
+`yarn` is preferred over `npm`
+
+Install the latest *NPM* and *Yarn* packages for _NodeJS_:
+
+``` sh
+npm install -g npm@latest <1>
+npm install -g yarn@latest
 ```
 
-## Installation
+* <1> The package managers *npm* and *yarn* are installed *globally* (-g)
 
-Add this line to your Jekyll site's `Gemfile`:
+# Setting up the project
 
-```ruby
-gem "plainwhite"
+Running the J1 template project is simple:
+
+* Setup the project
+* Bundle (install) all Ruby GEMs required
+* Run and develop your web
+
+J1 Project Structure
+```
+  ├──── .
+  │     └─ _data  <1>
+  │     └─ _includes <2>
+  │     └─ _plugins <3>
+  │     └─ assets <4>
+  │     └─ collections <5>
+  │     └─ pages <6>
+  │     └─ utilsrv
+  ├──── _config.yml <7>
+  ├──── config.ru
+  ├──── .gitattributes
+  ├──── .gitignore
+  ├──── favicon.ico
+  ├──── Gemfile <8>
+  ├──── index.html <9>
+  └──── package.json <10>
 ```
 
-And add this line to your Jekyll site's `_config.yml`:
+* <1>   J1 Configuration data
+* <2>   Asciidoc includes (global)
+* <3>   Build-in plugins (Ruby)
+* <4>   Assets for the Web
+* <5>   Folder that contains all Blog Posts
+* <6>   Folder that contains all Articles
+* <7>   Central site configuration (Jekyll)
+* <8>   Ruby Gemfile
+* <9>   Homepage for the Web
+* <10>  J1 Project file (NPM)
 
-```yaml
-theme: plainwhite
+## Bundle the Ruby GEMs
+
+First, install (bundle) all Ruby GEMs required. You can install the
+**bundle** with your home directory (userized):
+
+``` sh
+bundle config set --local path ~/.gem
+bundle install
 ```
 
-And then execute:
+or system-wide:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install plainwhite
-
-## Usage
-
-The "plainwhite" key in \_config.yml is used to customize the theme data.
-
-```yaml
-plainwhite:
-  name: Adam Denisov
-  tagline: Developer. Designer
-  date_format: "%b %-d, %Y"
-
-  social_links:
-    twitter: samarsault
-    github: samarsault
-    linkedIn: in/samarsault # format: locale/username
+``` sh
+bundle install
 ```
 
-**Updating Placeholder Image**
+## Initialize the project
 
-The placeholder portfolio image can be replaced by the desired image by placing it as `assets/portfolio.png` in your jekyll website, or by changing the following line in `_config.yaml`
+Initializing the project is done by the NodeJS package manager *yarn*
+running the task `setup`.
 
-```yaml
-plainwhite:
-  portfolio_image:  "assets/portfolio.png" # the path from the base directory of the site to the image to display (no / at the start)
+The task `setup` takes a while. Typically some minutes for the *first*
+run (depending on the performances of your Internet connection and your
+Desktop PC). A bunch of NPM modules and Ruby Gems gets downloaded, installed,
+and linked for the project. See the setup task as an extended *install* and
+*build* process to make your new website ready to use.
+
+Let's start ...
+
+``` sh
+yarn setup
 ```
 
-To use a different image for dark mode, e.g. with different colors that work better in dark mode, add a `portfolio_image_dark` entry in addition to the `portfolio_image`.
+Because a lot of sub-tasks getting started for a (first) `setup`, see below
+the output as a summary :
 
-```yaml
-plainwhite:
-  portfolio_image:      "assets/portfolio.png"
-  portfolio_image_dark: "assets/portfolio_dark.png"
+```
+Setup project for first use ..
+Bootstrap base modules ..
+done.
+Configure environment ..
+done.
+Create project folders ..
+Create log folder ..
+Create archived log folder ..
+Create etc folder ..
+done.
+Bootstrap project modules ..
+Bootstrap utility server modules ..
+done.
+Detect OS ..
+OS detected: Windows_NT
+Build site incremental ..
+Configuration file: C:/J1Webs/starter/_config.yml
+            Source: C:/J1Webs/starter
+       Destination: C:/J1Webs/starter/_site
+ Incremental build: enabled
+      Generating...
+    J1 QuickSearch: creating search index ...
+    J1 QuickSearch: finished, index ready.
+      J1 Paginator: autopages, disabled|not configured
+      J1 Paginator: pagination enabled, start processing ...
+      J1 Paginator: finished, processed 1 pagination page|s
+                    done in 37.609 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+.. build finished.
+To open the site, run: yarn site
+Done in 94.94s.
 ```
 
-**Comments (Disqus)**
+## Running the Starter Web
 
-Comments on posts can be enabled by specifying your disqus_shortname under plainwhite in `_config.yml`. For example,
+Running the Starter Web for development is done like so:
 
-```yaml
-plainwhite:
-  disqus_shortname: games
+``` sh
+yarn site
 ```
 
-**Google Analytics**
+The task `site` does a lot for you; whatever is necessary for a full-stack
+Web development. The task will put in place all needed CSS and JS components,
+build the Web content, and finally run the webite in a browser.
 
-It can be enabled by specifying your analytics id under plainwhite in `_config.yml`
+Go, go, go ..
 
-```yaml
-plainwhite:
-  analytics_id: "< YOUR ID >"
+```
+yarn run v1.22.10
+$ run-p -s site:*
+Startup the site ..
+UTILSRV disabled. Not started.
+Configuration file: C:/J1Webs/starter/_config.yml   <1>
+            Source: C:/J1Webs/starter   <2>
+       Destination: C:/J1Webs/starter/_site   <3>
+ Incremental build: enabled
+      Generating...
+    J1 QuickSearch: recreate index disabled.
+      J1 Paginator: autopages, disabled|not configured
+      J1 Paginator: pagination enabled, start processing ...
+      J1 Paginator: finished, processed 1 pagination page|s
+                    done in 9.618 seconds.
+ Auto-regeneration: enabled for '.'
+LiveReload address: http://localhost:40001    <5>
+    Server address: http://localhost:40000/   <4>
+  Server running... press ctrl-c to stop.
+        LiveReload: Browser connected   <6>
 ```
 
-**Sitemap**
+* <1> The configuration file for the builder engine _Jekyll_
+* <2> The project folder
+* <3> The *WebRoot* folder for your website creaated
+* <4> The *URL* to access the web
+* <5> A *LiveReloader* is started and listens on port *40001*
+* <6> A webbrowser has been started automatically and the *LiveReloader*
+    is connected
 
-It can be toggled by the following line to under plainwhite in `_config.yml`
+Your *default* web browser is automatically started, and the website gets
+loaded.
 
-```yaml
-plainwhite:
-  sitemap: true
+
+## Reset the Project
+
+To start from the beginning, you can reset the project to the factory state.
+The top-level task `reset` does the resetting work for you
+and cleans up each and everything except the Git repo and the NPM modules
+folder `node_modules` stored in the project root. Both are kept untouched
+by a reset.
+
+``` sh
+yarn reset
 ```
 
-**Excerpts**
+To reset the Development System *completely*, delete the folder `node_modules`
+manually and start from scratch by running the `setup` task again:
 
-Excerpts can be enabled by adding the following line to your `_config.yml`
-
-```yaml
-show_excerpts: true
+``` sh
+yarn setup
 ```
 
-**Layouts**
-
-- Home
-- Page
-- Post
-
-**Navigation**
-
-Navigation can be enabled by adding the following line to your `_config.yml`
-
-```yaml
-plainwhite:
-  navigation:
-    - title: My Work
-      url: "/my-work"
-    - title: Resume
-      url: "/resume"
-```
-
-**Mobile**
-
-By default, Plainwhite places the sidebar (logo, name, tagline etc.) above the content on mobile (narrow screens).
-To condense it (moving some things to the bottom of the page and making the rest smaller) so it takes up less space, add the following to your `_config.yml`:
-
-```yaml
-plainwhite:
-  condensed_mobile:
-    - home
-    - post
-    - page
-```
-
-This chooses which layouts (types of page) should be condensed on mobile screens. E.g. if you want everything but the landing page to be condensed, remove `home` from the list. This option does not affect rendering on wider screens.
-
-**Dark mode**
-
-Dark mode can be enabled by setting the `dark_mode` flag in your `_config.yml`
-
-The website will check the OS preferred color scheme and set the theme accordingly, the preference will then be saved in a cookie
-
-```yaml
-plainwhite:
-  dark_mode: true
-```
-
-![plainwhite dark theme previe](/dark.png)
-
-**Multiline tagline**
-
-Tagline can be multiline in this way
-
-```yaml
-plainwhite:
-  tagline: |
-  First Line. 
-
-  Second Line. 
-
-  Third Line.
-```
-
-**Search-bar**
-
-Search-bar can be enabled by adding the following line to `config.yml`
-
-```yaml
-plainwhite:
-  search: true
-```
-
-Search is powered by [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search) Jekyll plugin. A `search.json` containing post meta and contents will be generated in site root folder. Plugin JavaScript will then match for posts based on user input. More info and `search.json` customization documentation can be found in plugin repository.
-
-**Base URL**
-
-You can specify a custom base URL (eg. example.com/blog/) by adding the following line to `_config.yaml`. Note that there is no trailing slash on the URL.
-
-```yaml
-baseurl: "/blog"
-```
-
-**Language**
-
-You can set the `lang` attribute of the `<html>` tag on your pages by changing the following line in `_config.yml`:
-
-```yaml
-plainwhite:
-  html_lang: "en"
-```
-
-[See here for a full list of available language codes](https://www.w3schools.com/tags/ref_country_codes.asp)
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/samarsault/plainwhite-jekyll. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `plainwhite.gemspec` accordingly.
-
-## Donation
-If this project help you reduce time to develop, you can give me a cup of coffee :) 
-
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/thelehhman)
-
-## License
-
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## More themes
-
-- [Texture](https://github.com/samarsault/texture)
+Happy Jekylling!

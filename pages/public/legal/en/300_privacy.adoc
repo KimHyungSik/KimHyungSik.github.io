@@ -1,0 +1,413 @@
+---
+title:                                  Privacy
+tagline:                                your personal data
+date:                                   2023-01-01 01:00:00 +100
+description: >
+                                        Description has to be placed here
+
+categories:                             [ Site ]
+tags:                                   [ Privacy, Policy ]
+
+robots:
+  index:                                false
+  follow:                               false
+
+sitemap:                                false
+exclude_from_search:                    true
+
+fab_menu_id:                            page_ctrl_simple
+scrollbar:                              false
+comments:                               false
+toc:                                    true
+
+permalink:                              /pages/public/legal/en/privacy/
+regenerate:                             false
+
+resources:                              [ animate ]
+resource_options:
+  - attic:
+      padding_top:                      400
+      padding_bottom:                   50
+      opacity:                          0.5
+      slides:
+        - url:                          /assets/images/modules/attics/markus-spiske-1920x1280.jpg
+          alt:                          Photo by Markus Spiske on Unsplash
+          badge:
+            type:                       unsplash
+            author:                     Markus Spiske
+            href:                       https://unsplash.com/@markusspiske
+---
+
+// Page Initializer
+// =============================================================================
+// Enable the Liquid Preprocessor
+:page-liquid:
+
+// Set (local) page attributes here
+// -----------------------------------------------------------------------------
+// :page--attr:                         <attr-value>
+:legal-warning:                         false
+
+// Attribute settings for section control
+//
+:cookies:                               true
+:cookie-consent:                        true
+:logs-files:                            false
+:google-analytics:                      true
+:hyvor:                                 true
+:facebook:                              false
+:twitter:                               false
+:instagram:                             false
+:youtube:                               true
+:vimeo:                                 true
+
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+
+// Load page attributes
+// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="global" %}
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ifeval::[{legal-warning} == true]
+WARNING: This document *does not* constitute any *legal advice*. It is
+highly recommended to verify legal aspects and implications.
+endif::[]
+
+// Include sub-documents (if any)
+// -----------------------------------------------------------------------------
+The operators of this website take the protection of your personal data
+seriously. We treat your data confidentially and protect your data privacy to
+the General Data Protection Regulation (GDPR) of the European Union.
+
+ifeval::[{cookies} == true]
+== Cookies
+
+This website uses cookies and similar technologies for its operation
+this offer. You are free to give your consent, refuse, or revoke by clicking on
+the data protection dialog button. Subsequent changes are possible
+*at any time* by clicking on the icon mdi:cookie[18px, md-blue] placed in
+the *menu bar*.
+
+*Advanced* third-party cookies are only used with your consent. Additional
+cookies are used to analyze the website usage or to offer personalized content.
+The evaluation of this information gives you a better user experience of the
+offered content, such as additional functions. Further information you find in
+the data protection dialog by clicking the button *Privacy Policy* or in the
+following sections of the respective providers.
+
+Necessary::
+Necessary data is stored in cookies to enable the basic services of this site
+to operate. This website *does not keep records* of their use. All information
+(data) necessary to control this page are stored in so-called *session cookies*.
+Session cookies are *automatically* removed from your browser when you have
+*closed* all the tabs in your browser.
+
+Analyses::
+Analyzing the use of this website helps us to improve your user experience of
+the website to optimize. Google Analytics (GA) is used for the analysis. This
+site does not transmit any personal data. Implicit personal data such as
+IP addresses are *anonymized* to protect your privacy.
+
+Personalization::
+Personalization is used, for example, to collect user feedback, offer
+additional functions, or carry out advertising campaigns. Revenue from
+advertising allows us to make this website available to you free of charge.
+Partners enable us to offer you excellent personalized services and
+finance the costs of running this website.
+endif::[]
+
+
+ifeval::[{cookie-consent} == true]
+== Privacy and your settings
+
+If you want to set which *cookies* (and similar technologies) are used by
+this site, you can adjust your consent settings. You can also refuse cookies
+by using your *browser* accordingly. Please be careful when changing your
+browser settings. Rejecting on cookies can cause serious issues when visiting
+websites lead to the use of cookies. This does not only apply to the pages
+of this website.
+
+NOTE: Have you previously visited our website and agreed on the use of cookies,
+the data files created at this time may still stored on your system. In such
+cases, cookies already be present and needs to be *manually* deleted by
+functions of your browser.
+
+++++
+<div class="mt-4 mb-4 d-grid gap-2">
+  <a  href="javascript:j1.cookieConsent.showDialog()"
+      class="btn btn-primary btn-flex btn-lg"
+      aria-label="Cookie Consent">
+      <i class="mdi mdi-cookie mdi-2x mr-2"></i>
+      Your settings
+  </a>
+</div>
+++++
+endif::[]
+
+ifeval::[{logs-files} == true]
+== Log files
+
+We collect certain information automatically from our web servers and save them
+in log files on our servers. This information can be Internet Protocol (IP)
+addresses, browser type, Internet service provider (ISP), referral and exit
+pages, the operation system, time stamp and/or other clickstream data.
+
+These are:
+
+* Browser type and version
+* Operating system
+* URLs
+* Hostnames
+* Timestamps of pages viewed
+
+We can combine this log information with other information. We do this to
+improve the services we offer and to improve the content on our website.
+endif::[]
+
+ifeval::[{google-analytics} == true]
+== Traffic analytics (GA)
+
+This website uses Google Analytics (GA), a data service for the analysis of
+user activity. This functionality is only available if you have given your
+consent on privacy settings for *analyzes*.
+This service is offered by:
+
+----
+   Google Inc.
+   1600 Amphitheatre Parkway Mountain View
+   CA 94043
+   USA
+----
+
+The service uses so-called cookies. These are text files saved on your system
+to evaluate users for their activity on the website. The information generated
+by cookies will be transmitted to the provider and stored on the company's
+servers.
+
+This website uses *anonymization* of *IP addresses*. *Network addresses* of
+visitors out of the area of the European Union as well as other countries
+were contracting to the privacy regulations on the European Economic area
+*shortened*. *Personal* assignment of the data recorded is *not* possible.
+
+For more information, see the companies guidelines of the
+link:{url-google--privacy-policy-de}[Privacy Settings, {browser-window--new}].
+
+NOTE: You can object to its use at any time by selecting the appropriate
+settings with your privacy settings. Notice, however, that you may not be able
+to use the full functionality of this website in this case.
+endif::[]
+
+ifeval::[{hyvor} == true]
+== Use of Comments (HT)
+
+On our pages, *functions* of the service *Hyvor Talk* (HT) may be embedded.
+This functionality is only available if you have given your consent on
+privacy settings for *personalization*.
+These services are offered by:
+
+----
+Green Mount State
+Madawa, Pilessa No 130
+Kurunegala
+Sri Lanka
+----
+
+The *costs* for the provision of the service are paid by the *operator* of
+this website. The services of *Hyvor Talk* respect your privacy first. If you
+use commenting at *Hyvor Talk*, the platform will establish a direct link
+between your browser and the servers of the *Hyvor* company.
+
+If you are commenting on Hyvor, *no* tracking, advertising, affiliate, or any
+other *third party* codes are collected or transmitted. Personal data is
+*never* passed on to third parties.
+
+The service uses so-called cookies. These are text files saved on your system
+to evaluate the user's activity. The information generated by cookies will be
+transmitted to the provider and stored on the company's servers.
+
+For more information, see the companies guidelines of the
+https://hyvor.com/privacy-policy[Privacy Settings, {browser-window--new}].
+
+NOTE: You can object to its use at any time by selecting the appropriate
+settings with your privacy settings. Notice, however, that you may not be able
+to use the full functionality of this website in this case.
+endif::[]
+
+
+ifeval::[{facebook} == true]
+== Use of Facebook
+
+On our pages, *functions* of the social network *Facebook* (HT) may be embedded.
+This functionality is only available if you have given your consent on privacy
+settings for *personalization*.
+These services are offered by:
+
+----
+  Facebook Inc.
+  1 Hacker Way Menlo Park
+  CA 94025
+  USA
+----
+
+When you visit our website, the integration (*Like Button*) creates a direct
+connection between your browser and the provider's server. As a result,
+personal data is sent to the systems of the provider. The prerequisite
+for this is that you are logged in with your user account visiting our
+pages.
+
+The service uses so-called cookies. These are text files saved on your system
+to evaluate the user's activity. The information generated by cookies will be
+transmitted to the provider and stored on the company's servers.
+We point out that we, the operator, do not know about what data is transmitted
+as well as their use at the service provider.
+
+For more information, see the companies guidelines of the
+link:{url-facebook--privacy-policy-en}[Privacy Settings, {browser-window--new}].
+
+NOTE: You can object to its use at any time by selecting the appropriate
+settings with your privacy settings. Notice, however, that you may not be able
+to use the full functionality of this website in this case.
+endif::[]
+
+ifeval::[{twitter} == true]
+== Use of Twitter
+
+On our pages, *functions* of the news network *Twitter* may be embedded.
+This functionality is only available if you have given your consent on
+privacy settings for *personalization*.
+These services are offered by:
+
+----
+  Twitter Inc.
+  1355 Market Street Suite 900
+  CA 94103
+  USA
+----
+
+When you visit our website, the integration (*Re-Tweet*) creates a direct
+connection between your browser and the provider's server. As a result,
+personal data is sent to the systems of the provider. The prerequisite
+for this is that you are logged in with your user account visiting our
+pages.
+
+The service uses so-called cookies. These are text files saved on your system
+to evaluate the user's activity. The information generated by cookies will be
+transmitted to the provider and stored on the company's servers.
+We point out that we, the operator, do not know about what data is transmitted
+as well as their use at the service provider.
+
+For more information, see the companies guidelines of the
+link:{url-twitter--privacy-policy-en}[Privacy Settings, {browser-window--new}].
+
+NOTE: You can object to its use at any time by selecting the appropriate
+settings with your privacy settings. Notice, however, that you may not be able
+to use the full functionality of this website in this case.
+endif::[]
+
+ifeval::[{instagram} == true]
+== Use of Instagram
+
+On our pages, *functions* of the social network *Instagram* may be embedded.
+This functionality is only available if you have given your consent on
+privacy settings for *personalization*.
+These services are offered by:
+
+----
+  Instagram Inc.
+  1601 Willow Road Menlo Park
+  CA 94025
+  USA
+----
+
+When you visit our website, the integration (*Instagram Button*) creates a
+direct connection between your browser and the provider's server. As a result,
+personal data is sent to the systems of the provider. The prerequisite
+for this is that you are logged in with your user account visiting our
+pages.
+We point out that we, the operator, do not know about what data is transmitted
+as well as their use at the service provider.
+
+The service uses so-called cookies. These are text files saved on your system
+to evaluate the user's activity. The information generated by cookies will be
+transmitted to the provider and stored on the company's servers.
+
+For more information, see the companies guidelines of the
+link:{url-instagram--privacy-policy}[Privacy Settings, {browser-window--new}].
+
+NOTE: You can object to its use at any time by selecting the appropriate
+settings with your privacy settings. Notice, however, that you may not be able
+to use the full functionality of this website in this case.
+endif::[]
+
+
+ifeval::[{youtube} == true]
+== Use of YouTube Videos (YTV)
+
+On our pages, *functions* (player) of the video platform *YouTube* (YT) may be
+embedded. This functionality is only available if you have given your consent
+on privacy settings for *personalization*.
+These services are offered by:
+
+----
+  Google Ireland Limited
+  Gordon House, Barrow Street
+  Dublin 4
+  Irland
+----
+
+When you visit our website, the integration (*Player*) creates a direct
+connection between your browser and the provider's server. In addition to the
+content (videos), personal data is transmitted to the servers of the company
+*YouTube*.
+
+The service uses so-called cookies. These are text files saved on your system
+to evaluate the user's activity. The information generated by cookies will be
+transmitted to the provider and stored on the company's servers.
+We point out that we, the operator, do not know about what data is transmitted
+as well as their use at the service provider.
+
+For more information, see the companies guidelines of the
+link:{url-google--privacy-policy-de}[Privacy Settings, {browser-window--new}].
+
+NOTE: You can object to its use at any time by selecting the appropriate
+settings with your privacy settings. Notice, however, that you may not be able
+to use the full functionality of this website in this case.
+endif::[]
+
+ifeval::[{vimeo} == true]
+== Use of Vimeo Videos (VIV)
+
+On our pages, *functions* (player) of the video platform *Vimeo* (VI) may be
+embedded. This functionality is only available if you have given your consent
+on privacy settings for *personalization*.
+These services are offered by:
+
+----
+  Vimeo Inc.
+  555 West 18th Street
+  NY 10011
+  USA
+----
+
+When you visit our website, the integration (*Player*) creates a direct
+connection between your browser and the provider's server. In addition to the
+content (videos), personal data is transmitted to the servers of the company
+*Vimeo*.
+
+The service uses so-called cookies. These are text files saved on your system
+to evaluate the user's activity. The information generated by cookies will be
+transmitted to the provider and stored on the company's servers.
+We point out that we, the operator, do not know about what data is transmitted
+as well as their use at the service provider.
+
+For more information, see the companies guidelines of the
+link:{url-vimeo--privacy-policy}[Privacy Settings, {browser-window--new}].
+
+NOTE: You can object to its use at any time by selecting the appropriate
+settings with your privacy settings. Notice, however, that you may not be able
+to use the full functionality of this website in this case.
+endif::[]

@@ -1,0 +1,141 @@
+---
+title:                                  Comment Policy
+tagline:                                discuss with respect
+date:                                   2021-03-30 00:00:00 +100
+description: >
+                                        We love comments and appreciate the time that our visitors
+                                        spend to share ideas and give feedback. Thank you to everyone
+                                        who comments at {j1--site-name}.
+
+categories:                             [ Site ]
+tags:                                   [ Comments, Policy ]
+
+robots:
+  index:                                false
+  follow:                               false
+
+sitemap:                                false
+exclude_from_search:                    true
+
+fab_menu_id:                            page_ctrl_simple
+scrollbar:                              false
+toc:                                    true
+
+comments:                               false
+
+permalink:                              /pages/public/legal/en/comment_policy/
+regenerate:                             true
+
+resources:                              [ animate ]
+resource_options:
+  - attic:
+      padding_top:                      400
+      padding_bottom:                   50
+      opacity:                          0.5
+      slides:
+        - url:                          /assets/images/modules/attics/leon-1920x1280.jpg
+          alt:                          Photo by Leon on Unsplash
+          badge:
+            type:                       unsplash
+            author:                     Leon
+            href:                       https://unsplash.com/@myleon
+---
+
+// Page Initializer
+// =============================================================================
+// Enable the Liquid Preprocessor
+:page-liquid:
+
+// Set (local) page attributes here
+// -----------------------------------------------------------------------------
+// :page--attr:                         <attr-value>
+:disqus:                                false
+:hyvor:                                 true
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+
+// Load page attributes
+// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="global" %}
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Include sub-documents (if any)
+// -----------------------------------------------------------------------------
+We love comments and appreciate our visitor's time to share ideas and give
+feedback. Thank you to everyone who places a comment on the {j1--site-name}
+website.
+
+ifeval::[{hyvor} == true]
+To access the public commenting feature, you will need to register for
+an account as an *individual* at _Hyvor_. One of the primary purposes of
+encouraging comments on the {j1--site-name} website is to promote a sense
+of community.
+
+NOTE:  _Hyvor Talk_ is a *privacy-first*, no ads, no tracking platform to
+support visitors for comments on websites. When you visit our website, the
+commenting platform will establish a direct connection between your browser
+and the server at Hyvor, but does *not* sell any of your personal data to
+third-parties or any advertisers. The _Hyvor Talk_ platform includes various
+features, such as social integration and social networking to support
+your personal networks.
+endif::[]
+
+ifeval::[{disqus} == true]
+To access the public commenting feature, you will need to register for
+an account as an *individual* at _Disqus_. One of the primary purposes of
+encouraging comments on the {j1--site-name} website is to promote a sense
+of community.
+
+NOTE: _Disqus_ (/dɪsˈkʌs/) is a *commercial* blog comment hosting service
+for websites and online communities that use a networked platform. When you
+visit our website, the commenting platform will establish a direct connection
+between your browser and the server at Disqus. The _Disqus_ platform includes
+various features, such as social integration and social networking to support
+your personal networks.
+endif::[]
+
+== Discuss with Respect
+
+One of the most important aspects of a helpful blog is the conversation
+that occurs through comments that visitors publish on blog posts. However,
+comment conversations can sometimes take a negative turn or feature spam
+links. That's why it's helpful to have this blog comment policy. Visitors
+can understand what is and is not acceptable when commenting.
+
+=== Comments are Welcome
+
+Comments are welcomed and encouraged on this site, but there are some
+instances where comments will be edited or deleted. The owner of this site
+reserves the right to edit or delete any comments submitted to the blog
+without notice.
+
+NOTE: This comment policy is subject to change at any time.
+
+Promotional::
+Comments deemed to be spam or solely promotional in nature will be
+deleted. Links to relevant content are permitted, but comments should be
+relevant to the article topics.
+
+Profanity::
+Comments including profanity will be deleted.
+
+Roughly language::
+Comments containing language or concepts that could be deemed offensive
+will be deleted. Note this may include abusive, threatening, pornographic,
+offensive, misleading, or libelous language.
+
+Attack::
+Comments that attack any *individual* directly will be deleted.
+
+Harassing::
+Comments that harass other posters will be deleted. While conversation and
+the sharing of different ideas are encouraged, all comments need to be
+respectful towards our contributors and those leaving comments.
+
+Anonymous::
+Anonymous comments will be deleted. We only accept comments from people who
+identify themselves.

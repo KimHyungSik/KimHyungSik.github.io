@@ -1,0 +1,35 @@
+# ------------------------------------------------------------------------------
+#  ~/_data/modules/google_translate.yml
+#  User configuration settings for J1 Google Translate module
+#
+#  Product/Info:
+#  https://jekyll.one
+#
+#  Copyright (C) 2021 Juergen Adams
+#
+#  J1 Template is licensed under the MIT License.
+#  See: https://github.com/jekyll-one/J1 Template/blob/master/LICENSE
+# ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+# Description (used for J1 CC only)
+#
+description:
+
+  title:                                J1 Translator
+  scope:                                User settings
+  location:                             _data/modules/translator.yml
+
+# ------------------------------------------------------------------------------
+# User configuration settings
+#
+settings:
+  enabled:                              true
+
+  translatorName:                       google
+  contentLanguage:                      en                                      # [auto|any supported language], auto: language set by site config
+  dialogLanguage:                       auto                                    # [auto|en|de], auto: language set by site config
+  translationLanguage:                  de                                      # any supported language
+
+# ------------------------------------------------------------------------------
+# END config

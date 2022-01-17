@@ -1,0 +1,105 @@
+# ------------------------------------------------------------------------------
+# ~/_data/modules/default/advertising.yml
+# Default configuration settings of the Ad Module
+#
+# Product/Info:
+# https://jekyll.one
+#
+# Copyright (C) 2021 Juergen Adams
+#
+# J1 Template is licensed under the MIT License.
+# See: https://github.com/jekyll-one-org/J1 Template/blob/master/LICENSE
+#
+# ------------------------------------------------------------------------------
+# NOTE:
+#
+# ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+# Description (used for J1 CC only)
+#
+description:
+
+  title:                                Advertising
+  scope:                                Default settings
+  location:                             _data/modules/default/advertising.yml
+
+# ------------------------------------------------------------------------------
+# User settings
+#
+defaults:
+
+  # ----------------------------------------------------------------------------
+  # Settings
+  #
+  #   enabled
+  #   --------------------------------------------------------------------------
+  #   Enables or disables the Ad services. If disabled, ad services is NOT
+  #   initialized and no unit container get initialized on any page even the
+  #   module is loaded.
+  #
+  #   values:                           [true|false]
+  #   default:                          true
+  #
+  #   provider
+  #   --------------------------------------------------------------------------
+  #   Currently, only Google adsense (google) is available as an provider
+  #   for advertising.
+  #
+  #   values:                           [google]
+  #   default:                          google
+  #
+  # ----------------------------------------------------------------------------
+  #
+  enabled:                              true
+  provider:                             google
+
+  google:
+    # --------------------------------------------------------------------------
+    # Provider settings (Google)
+    #
+    #   publisherID
+    #   ------------------------------------------------------------------------
+    #   Your publisher id (ca-pub-xxxx..xxx) connected with your Adsense
+    #   Account the for the domain registered.
+    #
+    #   values:                         string
+    #   default:                        none
+    #
+    #   autoHideOnUnfilled
+    #   ------------------------------------------------------------------------
+    #   For several reasons, the placed ad (unit) containers get unfilled (no
+    #   ad placed inside). Unfilled unit containers results in blank areas
+    #   instead. Using the setting autoHideOnUnfilled, unfilled containers
+    #   can be hidden automatically.
+    #
+    #   values:                         [true|false]
+    #   default:                        true
+    #
+    #   checkTrackingProtection (currently NOT supported)
+    #   ------------------------------------------------------------------------
+    #   Modern browsers in their current versions (e.g. FireFox) provide
+    #   Tracking Protection build-in. If Tracking Protection is enabled
+    #   for a browser, showing ads may blocked automatically. All unit
+    #   containers affected by Tracking Protection are hidden automatically.
+    #
+    #   values:                         [true|false]
+    #   default:                        false
+    #
+    #   showErrorPageOnBlocked (currently NOT supported)
+    #   ------------------------------------------------------------------------
+    #   If Tracking Protection is detected for a browser, no content is
+    #   presented to the visitor and an error page is shown (HTML 447).
+    #
+    #   values:                         [true|false]
+    #   default:                        false
+    #
+    # --------------------------------------------------------------------------
+    #
+    autoHideOnUnfilled:                 true
+    addBorderOnUnfilled:                true
+    checkTrackingProtection:            false
+    showErrorPageOnBlocked:             false
+
+# ------------------------------------------------------------------------------
+# END config

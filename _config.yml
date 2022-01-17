@@ -1,41 +1,55 @@
-title: Link 
-description: Just 4 Fun. 
-keywords: blog,css,html,php 
-author: "Link"
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
+# Site settings
+title: Your awesome title
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://yourdomain.com" # the base hostname & protocol for your site
 
-hide: 형식적블로그
-show: 형식적블로그
+social_sharing: true
+github_username:  jekyll
+google_analytic_id:
+disqus_name:
+permalink: /:year/:month/:day/:title:output_ext
 
-url: "hydrogen.atlinker.cn" 
-buildtime: "1514736000" 
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/page/:num.html'
+  title: ':title - page :num'
+  sort_reverse: true
 
+autopages:
+  enabled: true
+  categories:
+    title: 'Posts in category :cat'
+  tags:
+    title: 'Posts tagged with :tag'
+  collections:
+    title: 'Posts in collection :coll'
 
-PJAX: true 
+jekyll-archives:
+  enabled:
+    - year
+    - month
+    - day
+  layout: archive
 
-paginate: 8 
-paginate_path: "page:num"
-
-background: https://api.dujin.org/bing/1920.php
-theme_color: 546E7A
-
-hydrogen-blog:
-  date_format: "%b %-d, %Y"
-
-
-MathJax: false
-
-plugins:
-  - jemoji
-
-# social account
-image:
+# jekyll seo tag settings
+logo: assets/images/example-image.png
 twitter:
-  username:
-#  site:
-facebook:
-  #publisher: null
-  #profile_id: null
-  app_id: null
-  #authors: null
-#  admins:
+  username: jekyllrb
+
+# Build settings
+markdown: kramdown
+sass:
+  style: compressed

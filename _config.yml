@@ -1,34 +1,30 @@
-title: Link #博客标题
-description: Just 4 Fun. #博客描述
-keywords: blog,css,html,php #博客关键字
+title: Link 
+description: Just 4 Fun. 
+keywords: blog,css,html,php 
 author: "Link"
 
-#title hide and show
-hide: (つェ⊂)我藏好啦
-show: ´∇｀ 呀被发现啦~ 
 
-baseurl: "" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
-url: "hydrogen.atlinker.cn" # change this to the base hostname & protocol for your site
-buildtime: "1514736000" #博客建立时的时间戳 可进入https://tool.lu/timestamp/将博客建立时的日期转换成时间戳
-           #The timestamp at the time of blog establishment can be entered at https://tool.lu/timestamp/to convert the date at the time of blog establishment into a timestamp.
+hide: 형식적블로그
+show: 형식적블로그
 
-PJAX: true #启用PJAX，会与评论系统冲突（如不用评论系统建议开启）
+url: "hydrogen.atlinker.cn" 
+buildtime: "1514736000" 
 
-paginate: 8 #同时显示的最大文章数，超过自动分页
+
+PJAX: true 
+
+paginate: 8 
 paginate_path: "page:num"
 
 background: https://api.dujin.org/bing/1920.php
 theme_color: 546E7A
 
-# hydrogen-blog date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 hydrogen-blog:
   date_format: "%b %-d, %Y"
 
-#MathJax switch
+
 MathJax: false
 
-#install emoji
 plugins:
   - jemoji
 

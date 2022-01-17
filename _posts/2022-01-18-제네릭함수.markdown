@@ -1,0 +1,51 @@
+---
+layout: post
+title:  Kotlin 제네릭 함수 알아보기
+categories: [Kotlin]
+tags: [ Kotlin, 제네릭, Generic]
+---
+ 
+ 
+ 플래닛 작업 중 useCase 부분의 코드들이 반복되는 보일러플레이트 코드를 발견 하나의 baseUseCase를 만들어 중복 코드를 제고 하기위해
+ 제네릭 클래스를 만들 필요가 있었다
+
+<details>
+<summary>클래스</summary>
+
+```kt
+  class BaseUseCase<T> {
+  }
+``` 
+  Generic클래스를 정의 할 때는 클래스의 이름 뒤에 T 를 붙여 생성
+</details>
+<details>
+<summary>함수</summary>
+  
+```kt
+ fun <T> useCase(arg: T) {}
+```
+  
+  Generic 함수를 생성할 때는 함수명 앞에 T 를 붙여서 생성
+</details> 
+<details>
+  <summary>공통</summary>
+
+  만약 두개이상의 Generic변수가 필요하다면
+  <T,K,C> 처럼 여러개의 변수를 선언 하면 된다
+  
+```kt
+  class BaseUseCase<T, K, C> {
+  }
+```
+기본적으로 Generic변수는 Nullable 이다 만약 notnull 타입으로 만들고 싶으면 뒤에 Any 타입을 선언 해주면 된다(<T> == <T : Any?>로 보면 될듯)
+   
+```kt
+ fun <T: Any> useCase(arg: T) {}
+```
+Generic 변수는 Super type인 Number로 숫자만 허용 되게 제한을 걸수 있다
+    
+```kt
+ fun <T: Number> useCase(arg: T) {}
+```   
+</details>
+TODO: in, out의 차이점과 활용 방법 등 추가 공부가 필요

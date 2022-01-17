@@ -1,0 +1,51 @@
+---
+layout: post
+title:  Dart언어 공부
+categories: [Flutter, Dart]
+tags: [Dart]
+---
+
+Dart
+------
+
+??=
+-----
+기본적으로 null값을 확인하는 코드는 아래와 같다.
+
+```dart
+if(value ?= null)
+  value = "Value"
+```
+하지만 dart 에서는 ??= 키워드를 사용하여 null을 확인 후 새로운 값을 넣을수있다 (+=, -= 와 비슷한 개념으로 보면 될 것 같다)
+
+```dart
+value ??= "Value"
+```
+
+Null Safety
+------------
+dart언어에서는 변수를 선언할때 초기화해 줘야한다.
+
+```dart
+int arg; // error
+int? arg; // ok
+```
+
+## !
+변수 뒤에 !를 추가하면 변서 값이 null일 경우 runtime error가 발생 한다
+
+```dart
+int? arg;
+arg! // runtime error
+```
+
+## late
+non-nullable 변수로 선언 하지만 선언과 동시에 초기화 시켜줄수 없는 경우 변수선언 시 앞에 late를 붙이며 변수를 초기화 시키지 않고 사용하게 되면 runtime error를 발생 시킨다.
+```dart
+int arg; // runtime error
+late int lateArg; // ok
+
+print(lateArg); // runtime error
+lateArg = 1;
+print(lateArg); .. ok
+```

@@ -1,0 +1,59 @@
+---
+layout: post
+title:  Kotlin Scope 함수 알아보기
+categories: [Kotlin]
+tags: [ Kotlin, Scope]
+---
+
+Scope Funcions
+-------
+
+객체의 일시적인 범위가 생기고 그 범위내에서 함수처리, 속성 변경등에 사용 되는함수
+
+https://kotlinlang.org/docs/scope-functions.html#function-selection
+
+let
+----------
+not-ull 객체로 null이 아닌 값을 반환한다(null-safety)
+
+```kt
+  fun <T, R> T.let(block: (T) -> R): R
+``` 
+자기 자신인 T를 받아 R을 반환 한다.
+마지막 블로의 형태에 따라 return값이 달라진다
+
+```kt
+  val value = letValuse?.let{it.value} ?: "defalut value"
+``` 
+뒤에 __?:__ 를 붙여 기본값을 지정할 수있다
+
+with
+---------
+이미생성된 객체를 인자로 받아 사용가능 하면 결과가 필요하지 않은경우 사용하면 좋다
+
+```kt
+ fun <T, R> with(receiver: T, block: T.() -> R): R
+ 
+ val value: WithValue = getWithValue()
+ print(value.arg1)
+ print(value.arg2)
+ 
+ with(value){
+   print(arg1)
+   print(arg2)
+ }
+``` 
+중복되는 코드를 줄일 수 있다
+
+run 
+-------
+with와 비슷한 사용법을 가지고 있다
+
+```kt
+  fun <T, R> T.run(block: T.() -> R): R
+```
+여러개의 변수들의 범위를 제한 하여 사용할 수 있다.
+__?:__ 를 사용하여 non-null일때만 호출 할 수있다
+
+TODO:: apply, also
+

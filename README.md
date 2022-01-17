@@ -1,321 +1,104 @@
-# All you need for your new amazing site
+# Hydrogen
+轻盈、干净
 
-Jekyll meets Bootstrap - and makes a lot of friends. J1 Template combines
-the best of OpenSource software for the Web and the Web site generator
-`Jekyll`. J1 is OpenSource, and so are the packaged modules - no pain for
-private or professional use. Explore this site to learn what's possible if
-you go to the Jekyll Way.
+跟随她的脚步，开始你的博客之旅
 
-**Create powerful modern Static Webs: Secure, Flexible and Fast.**
+>厌倦了无止境的加载以及繁杂的页面内容？那您很幸运，因为您发现了Hydrogen
+><br>我们避免繁杂 使用轻量化的模块来渲染在您屏幕上展示出来的一切 
+><br>当您使用过后就知道，她带给你的不仅仅只有简洁极速的阅读体验...
 
-![Screenshot](https://github.com/jekyll-one/j1-template-starter/raw/main/home-screenshot.jpg "J1 Starter Web")
+语言：简体中文 | [English](README-en.md)
 
-* Fully Responsive. J1 Template supports modern web browsers on all
-  devices for best results on PCs, Tablets, and SmartPhones.
-* Full Bootstrap V5 support. Current Technology and Design. Excellent
-  performance running desktop and mobile websites. Use Jekyll One to
-  present your content at its best.
-* Start in no time. No programming is needed to start using J1. The
-  Template provides a large number of building blocks to create modern
-  web pages in minutes.
+![hydrogen](/theme/logo-h.svg)
 
-**Create powerful modern Static Webs: Secure, Flexible and Fast.**
+~~点点~~Star~~来一个好吗！秋梨膏！！~~
 
-Have fun!
+# #快速开始
 
-# J1 Home
+![hydrogen](/theme/a-h.png)
 
-The template J1 can do a lot for you and maybe the base for your next web
-project. To experience more, welcome to visit the homepage of the template
-project at [jekyll.one](https://jekyll.one/).
+## #准备
 
-# J1 Live Demo
+打开主题根目录下的`_config.yml`
 
-The template comes with a Web included, a skeleton for your new Web site.
-This Web is called the **Starter Web**, a general-purpose Website scaffold to
-be modified for your needs. The built-in Starter Web [can be visited live
-at Netlify](https://j1-template-starter.netlify.app/).
+根据需求修改以下选项：
 
-**Have fun exploring what a modern static web, a Jekyll site can do**!
+`title` : 更改你的博客名字
 
-# J1 Features
+`description` : 更改你的博客描述
 
-The template combines the best free software for the web. Jekyll One Template
-is OpenSource and the modules included are free to use as well. No license
-issues for private or professional use.
+`keywords` : 博客关键词(SEO相关)
 
-* Fully Responsive. J1 Template supports modern web browsers on all
-  devices for best results on PCs, Tablets, and SmartPhones.
-* Full Bootstrap V5 support. Current Technology and Design. Excellent
-  performance running desktop and mobile websites. Use Jekyll One to
-  present your content at its best.
-* Start in no time. No programming is needed to start using J1. The
-  Template provides a large number of building blocks to create modern
-  web pages in minutes.
+`baseurl` : 博客所在的目录文件夹，开头需带上`/`，如果为根目录请留空(建议将博客放置在根目录)
 
-## General
+`url` : 你的域名，如`atlinker.cn`无需加`http/https://`
 
-* Jekyll 4.2 support
-* Ruby 2.7 support
-* Asciidoc (Asciidoctor) and Markdown support
-* Asciidoctor plugins included
-* Bootstrap V5 (v5.1.3)
-* Responsive Design
-* Material Design
-* Responsive Text
-* Responsive HTML tables
-* Compressed HTML, CSS and Javascript support
-* Themes support (Bootswatch)
-* Icon Font support (MDI, FA, Iconify, Twitter Emoji)
-* Themeable source code highlighting (Rouge)
-* Desktop and Mobile navigation ready
-* Fully configurable
-* Highest Google Lighthouse scores
+`bulidtime` : 博客建立时的时间戳，填写后将自动计算博客建立时间并显示在页脚. [日期转时间戳](https://tool.lu/timestamp/)
 
-## Modules and Extensions
+`paginate` : 主页中显示的最大文章数，超过设定的数值文章自动归入下一页
 
-* Bootstrap V5 extensions included
-* Asciidoctor extensions|plugins included
-* Smooth-Scroll support on all pages
-* Full-text search engine included (Lunr)
-* Blog Post navigation included
-* Cookie Consent module included (includes GDPR compatible OptIn/OptOut support)
-* Translator module included (includes GDPR compatible OptIn/OptOut support)
-* Advertising module included (includes GDPR compatible OptIn/OptOut support)
-* Analytics module included (includes GDPR compatible OptIn/OptOut support)
-* Clipboard module included
-* Floating Action Buttons|Menus included
-* Navigation module (multi purpose) included
-* Lightbox modules included
-* Gallery modules included
-* Carousel module included
-* Video modules included (HTML5 Video, YouTube, Vimeo)
+`background` : 博客首页主题图片路径
 
-## Addons and Integrations
+`theme_color` : 博客顶部栏颜色，填颜色代码**但不要带上#号**
 
-* Featured example content included
-* Royalty free images included
-* Support of comment provider APIs (Disqus, Hyvor)
-* Google Analytics support (includes GDPR compatible OptIn/OptOut support)
-* Google Addsense support (includes GDPR compatible OptIn/OptOut support)
-* Google Translate support (includes GDPR compatible OptIn/OptOut support)
-* Deploy on Github Pages (source only), Netlify and Heroku ready
+`MathJax` : 是否开启MathJax(布尔值)
 
-# Supported platforms
+`author` : 作者名
 
-J1 is supported on all current x64-based OS:
+> 开发者选项
+>> `PJAX` : PJAX无刷新加载(布尔值)
 
-* Windows 10|11
-* Windows WSL 2
-* Linux, kernel version >= 4.15 (e.g. Ubuntu  18.x LTS)
-* OSX, version >= 10.10.5 (Yosemite)
+## #设置域名
 
-Note that 32-bit versions (x32) are generally NOT supported for all
-platforms.
+修改根目录下的CNAME文件为你的域名即可
 
-# J1 Development languages and tools
+#### 关于主题的基本设置已经完毕~
 
-To run the project for J1 Template Web, the following languages and
-tools expected to be in place with your OS:
+---
 
-*   Ruby language, version >= 2.6 < 3.x (v2.7.x recommended)
-*   Javascript language (NodeJS), version >= 12.x < 14.x (v12.22.x recommended)
+## #友链添加
 
-## Update the package managers for _NodeJS_
+打开`_data`目录下的`friends.yml`文件，根据文件中模板新添代码即可
 
-NodeJS comes with the package manager *NPM* pre-installed. The native CLI for
-the NodeJS package management is `npm`. Besides `npm` there's another quite
-handy CLI for NPM available: *Yarn*.
+---
 
-The CLI `yarn` is developed at _Facebook_ and can be used as a replacement
-for `npm`. From a top-level perspective, both package management clients
-behave pretty much the *same*. The syntax `yarn` uses is shorter in writing,
-making the command-line look a bit more natural. Therefore, the use of
-`yarn` is preferred over `npm`
+## #文章置顶
 
-Install the latest *NPM* and *Yarn* packages for _NodeJS_:
+在文章Front Matter添加stickie: true即可
 
-``` sh
-npm install -g npm@latest <1>
-npm install -g yarn@latest
-```
-
-* <1> The package managers *npm* and *yarn* are installed *globally* (-g)
-
-# Setting up the project
-
-Running the J1 template project is simple:
-
-* Setup the project
-* Bundle (install) all Ruby GEMs required
-* Run and develop your web
-
-J1 Project Structure
-```
-  ├──── .
-  │     └─ _data  <1>
-  │     └─ _includes <2>
-  │     └─ _plugins <3>
-  │     └─ assets <4>
-  │     └─ collections <5>
-  │     └─ pages <6>
-  │     └─ utilsrv
-  ├──── _config.yml <7>
-  ├──── config.ru
-  ├──── .gitattributes
-  ├──── .gitignore
-  ├──── favicon.ico
-  ├──── Gemfile <8>
-  ├──── index.html <9>
-  └──── package.json <10>
-```
-
-* <1>   J1 Configuration data
-* <2>   Asciidoc includes (global)
-* <3>   Build-in plugins (Ruby)
-* <4>   Assets for the Web
-* <5>   Folder that contains all Blog Posts
-* <6>   Folder that contains all Articles
-* <7>   Central site configuration (Jekyll)
-* <8>   Ruby Gemfile
-* <9>   Homepage for the Web
-* <10>  J1 Project file (NPM)
-
-## Bundle the Ruby GEMs
-
-First, install (bundle) all Ruby GEMs required. You can install the
-**bundle** with your home directory (userized):
-
-``` sh
-bundle config set --local path ~/.gem
-bundle install
-```
-
-or system-wide:
-
-``` sh
-bundle install
-```
-
-## Initialize the project
-
-Initializing the project is done by the NodeJS package manager *yarn*
-running the task `setup`.
-
-The task `setup` takes a while. Typically some minutes for the *first*
-run (depending on the performances of your Internet connection and your
-Desktop PC). A bunch of NPM modules and Ruby Gems gets downloaded, installed,
-and linked for the project. See the setup task as an extended *install* and
-*build* process to make your new website ready to use.
-
-Let's start ...
-
-``` sh
-yarn setup
-```
-
-Because a lot of sub-tasks getting started for a (first) `setup`, see below
-the output as a summary :
+如：
 
 ```
-Setup project for first use ..
-Bootstrap base modules ..
-done.
-Configure environment ..
-done.
-Create project folders ..
-Create log folder ..
-Create archived log folder ..
-Create etc folder ..
-done.
-Bootstrap project modules ..
-Bootstrap utility server modules ..
-done.
-Detect OS ..
-OS detected: Windows_NT
-Build site incremental ..
-Configuration file: C:/J1Webs/starter/_config.yml
-            Source: C:/J1Webs/starter
-       Destination: C:/J1Webs/starter/_site
- Incremental build: enabled
-      Generating...
-    J1 QuickSearch: creating search index ...
-    J1 QuickSearch: finished, index ready.
-      J1 Paginator: autopages, disabled|not configured
-      J1 Paginator: pagination enabled, start processing ...
-      J1 Paginator: finished, processed 1 pagination page|s
-                    done in 37.609 seconds.
- Auto-regeneration: disabled. Use --watch to enable.
-.. build finished.
-To open the site, run: yarn site
-Done in 94.94s.
+ ---
+ layout: post
+ title: Hi
+ stickie: true
+ ---
 ```
 
-## Running the Starter Web
+## #评论
 
-Running the Starter Web for development is done like so:
+#### #前提
 
-``` sh
-yarn site
-```
+> 必须确定已阅读[Valine](https://valine.js.org/quickstart.html)文档
 
-The task `site` does a lot for you; whatever is necessary for a full-stack
-Web development. The task will put in place all needed CSS and JS components,
-build the Web content, and finally run the webite in a browser.
+配置文件:
 
-Go, go, go ..
+`_data/social.yml` : 填写app id和key以及评论的相关信息
 
-```
-yarn run v1.22.10
-$ run-p -s site:*
-Startup the site ..
-UTILSRV disabled. Not started.
-Configuration file: C:/J1Webs/starter/_config.yml   <1>
-            Source: C:/J1Webs/starter   <2>
-       Destination: C:/J1Webs/starter/_site   <3>
- Incremental build: enabled
-      Generating...
-    J1 QuickSearch: recreate index disabled.
-      J1 Paginator: autopages, disabled|not configured
-      J1 Paginator: pagination enabled, start processing ...
-      J1 Paginator: finished, processed 1 pagination page|s
-                    done in 9.618 seconds.
- Auto-regeneration: enabled for '.'
-LiveReload address: http://localhost:40001    <5>
-    Server address: http://localhost:40000/   <4>
-  Server running... press ctrl-c to stop.
-        LiveReload: Browser connected   <6>
-```
+`_includes/comments.html` : 评论设置
 
-* <1> The configuration file for the builder engine _Jekyll_
-* <2> The project folder
-* <3> The *WebRoot* folder for your website creaated
-* <4> The *URL* to access the web
-* <5> A *LiveReloader* is started and listens on port *40001*
-* <6> A webbrowser has been started automatically and the *LiveReloader*
-    is connected
+确保配置无误后修改`_data/social.yml`中的`enable`值由`false`改为`true`即可
 
-Your *default* web browser is automatically started, and the website gets
-loaded.
+## #写在最后
 
+请花10分钟时间**认真**阅读文档，如还有疑难之处，请提[issues](https://github.com/link9596/hydrogen/issues/new)，我会尽力帮忙
 
-## Reset the Project
+如使用过程有任何疑难Bug，也请提出[issues](https://github.com/link9596/hydrogen/issues/new)！ :+1:
 
-To start from the beginning, you can reset the project to the factory state.
-The top-level task `reset` does the resetting work for you
-and cleans up each and everything except the Git repo and the NPM modules
-folder `node_modules` stored in the project root. Both are kept untouched
-by a reset.
+最后，如果喜欢~请给项目点个star:wink:(点star的dalao都超级靓的)
 
-``` sh
-yarn reset
-```
+![hydrogen](/theme/author.svg)
 
-To reset the Development System *completely*, delete the folder `node_modules`
-manually and start from scratch by running the `setup` task again:
-
-``` sh
-yarn setup
-```
-
-Happy Jekylling!
+![](https://img.shields.io/github/repo-size/link9596/hydrogen?color=%23F8BBD0)
+![](https://img.shields.io/github/release/link9596/hydrogen?color=%235C6BC0&label=Version)

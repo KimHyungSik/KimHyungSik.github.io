@@ -2,5 +2,6 @@
 
 공부예정
 ------
-[ ] broadcasts reciver
-[ ] DeepLink
+- [ ] broadcasts reciver
+
+- [ ] DeepLink

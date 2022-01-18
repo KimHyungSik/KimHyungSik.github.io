@@ -7,7 +7,7 @@ url: "" # the base hostname & protocol for your site
 
 social_sharing: true
 github_username:  KimHyungSik
-google_analytic_id:
+google_analytic_id: "G-TL33ERJCE7"
 disqus_name:
 permalink: /:year/:month/:day/:title:output_ext
 

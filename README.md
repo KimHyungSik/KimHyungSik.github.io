@@ -3,5 +3,5 @@
 공부예정
 ------
 - [ ] broadcasts reciver
-
 - [ ] DeepLink
+- [ ] BuildConfig buildTypes별 

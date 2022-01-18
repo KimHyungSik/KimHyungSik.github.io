@@ -5,3 +5,4 @@
 - [ ] broadcasts reciver
 - [ ] DeepLink
 - [ ] BuildConfig buildTypes별 
+- [ ] Jetpack Paging3

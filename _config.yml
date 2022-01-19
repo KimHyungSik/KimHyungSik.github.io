@@ -162,7 +162,8 @@ google_analytics: ["G-TL33ERJCE7"]
 
 # Pagination setting
 # paginate: 5
-
+comments:
+  provider: disqus
 # Disqus comments
 disqus:
   shortname: "kimhyungsik.github.io"

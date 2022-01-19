@@ -3,7 +3,7 @@ email: colrog968@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   형식적으로 작성하는 김형식 개발 블로그
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+url: "https://kimhyungsik.github.io/" # the base hostname & protocol for your site
 
 social_sharing: true
 github_username:  KimHyungSik

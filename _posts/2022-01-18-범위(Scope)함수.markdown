@@ -2,8 +2,8 @@
 layout: post
 title:  Kotlin Scope 함수 알아보기
 categories: [Kotlin]
-tags: [Kotlin, Scope]
-date: 2022-01-18 06:00:00 +0900
+tags: [ Kotlin, Scope]
+date: 2022-01-21 06:00:00 +0900
 ---
 
 Scope Funcions

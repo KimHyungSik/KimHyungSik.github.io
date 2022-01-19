@@ -3,6 +3,7 @@ layout: post
 title:  Kotlin Scope 함수 알아보기
 categories: [Kotlin]
 tags: [ Kotlin, Scope]
+comments: true 
 ---
 
 Scope Funcions

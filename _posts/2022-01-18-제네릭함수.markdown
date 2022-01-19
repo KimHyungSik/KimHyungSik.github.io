@@ -3,6 +3,7 @@ layout: post
 title:  Kotlin 제네릭 함수 알아보기
 categories: [Kotlin]
 tags: [ Kotlin, 제네릭, Generic]
+comments: true 
 ---
  
  

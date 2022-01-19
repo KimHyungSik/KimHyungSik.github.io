@@ -3,6 +3,7 @@ layout: post
 title:  GithubActions 사용해 보기
 categories: [Github, CI, Github Actions]
 tags: [ Github Actions, Github]
+comments: true 
 ---
 
 GithubActions란 

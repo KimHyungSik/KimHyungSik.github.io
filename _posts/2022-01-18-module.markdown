@@ -3,6 +3,7 @@ layout: post
 title:  안드로이드 모듈화 방법
 categories: [Android]
 tags: [모듈, Module]
+comments: true 
 ---
 
 모듈

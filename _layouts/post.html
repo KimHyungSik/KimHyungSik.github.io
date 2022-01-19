@@ -1,28 +1,77 @@
 ---
-layout: default
+layout: framework
+banner:
+banner_html: post-header.html
+hidden: []
+sidebar:
+  - article-menu
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    {% include categories.html %}
-    <small class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</small>
+<div class="post">
+  <section>
 
-    {% if page.last_modified_at %}
-      <small class="post-meta">
-        <span>- Last modified at </span><time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>
-      </small>
-    {% endif %}
-  </header>
+    {%- assign name = 'banner' -%}
+    {%- include functions.html func='get_value' -%}
+    {%- assign banner = return -%}
 
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
-    {% include tags.html %}
-  </div>
+    {%- assign name = 'hidden' -%}
+    {%- include functions.html func='get_value' -%}
+    {%- assign hidden = return -%}
 
-</article>
+    {%- assign result = hidden | where_exp: "item", "item == 'header'" -%}
+    {%- if banner == nil and result.size == 0 -%}
+    {%- include views/post-header.html -%}
+    {%- endif -%}
 
-{% include social.html %}
-{% include pagination-post.html %}
-{% include related-post.html %}
-{% include comment.html %}
+    {%- include views/article.html -%}
+
+    {%- assign result = hidden | where_exp: "item", "item == 'navigator'" -%}
+    {%- if result.size == 0 -%}
+    <div class="post-nav">
+      {%- if page.previous -%}
+        <a class="previous" href="{{ page.previous.url | relative_url }}" title="{{
+          page.previous.title | escape }}">{{ page.previous.title | escape | truncatewords: 6 }}</a>
+      {%- else -%}
+      <span></span>
+      {%- endif -%}
+
+      {%- if page.next -%}
+        <a class="next" href="{{ page.next.url | relative_url }}" title="{{ page.next.title | escape }}">{{ page.next.title | escape | truncatewords: 6 }}</a>
+      {%- else -%}
+      <span></span>
+      {%- endif -%}
+    </div>
+    {%- endif -%}
+
+    {%- assign result = hidden | where_exp: "item", "item == 'related_posts'" -%}
+    {%- if result.size == 0 -%}
+    <div class="post-related">
+      <div>Related Articles</div>
+      <ul>
+        {% assign posts = site[page.collection] | sample:4 %}
+        {%- for post in posts -%}
+        <li><a class="post-link" href="{{post.url | relative_url}}" title="{{ page.next.title | escape }}">{{ post.title | escape | truncatewords: 12 }}</a></li>
+        {%- endfor -%}
+      </ul>
+    </div>
+    {%- endif -%}
+
+    {%- assign result = hidden | where_exp: "item", "item == 'comments'" -%}
+    {%- if result.size == 0 -%}
+    <div class="post-comments">
+      {%- if page.comments != false -%}
+
+      {%- if site.disqus.shortname -%}
+      {%- include extensions/comments/disqus.html -%}
+      {%- endif -%}
+
+      {%- if site.gitment.username -%}
+      {%- include extensions/comments/gitment.html -%}
+      {%- endif -%}
+
+      {%- endif -%}
+    </div>
+    {%- endif -%}
+
+  </section>
+</div>

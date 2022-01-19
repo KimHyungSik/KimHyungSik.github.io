@@ -1,0 +1,37 @@
+I""<h2 id="dart">Dart</h2>
+
+<h2>??=</h2>
+<p>기본적으로 null값을 확인하는 코드는 아래와 같다.</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span><span class="o">(</span><span class="n">value</span> <span class="o">?=</span> <span class="kc">null</span><span class="o">)</span>
+  <span class="n">value</span> <span class="o">=</span> <span class="s">"Value"</span>
+</code></pre></div></div>
+<p>하지만 dart 에서는 ??= 키워드를 사용하여 null을 확인 후 새로운 값을 넣을수있다 (+=, -= 와 비슷한 개념으로 보면 될 것 같다)</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">value</span> <span class="o">??=</span> <span class="s">"Value"</span>
+</code></pre></div></div>
+
+<h2 id="null-safety">Null Safety</h2>
+<p>dart언어에서는 변수를 선언할때 초기화해 줘야한다.</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">arg</span><span class="o">;</span> <span class="c1">// error</span>
+<span class="kt">int</span><span class="o">?</span> <span class="n">arg</span><span class="o">;</span> <span class="c1">// ok</span>
+</code></pre></div></div>
+
+<h2 id="-1">!</h2>
+<p>변수 뒤에 !를 추가하면 변서 값이 null일 경우 runtime error가 발생 한다</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span><span class="o">?</span> <span class="n">arg</span><span class="o">;</span>
+<span class="n">arg</span><span class="o">!</span> <span class="c1">// runtime error</span>
+</code></pre></div></div>
+
+<h2 id="late">late</h2>
+<p>non-nullable 변수로 선언 하지만 선언과 동시에 초기화 시켜줄수 없는 경우 변수선언 시 앞에 late를 붙이며 변수를 초기화 시키지 않고 사용하게 되면 runtime error를 발생 시킨다.</p>
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">arg</span><span class="o">;</span> <span class="c1">// runtime error</span>
+<span class="n">late</span> <span class="kt">int</span> <span class="n">lateArg</span><span class="o">;</span> <span class="c1">// ok</span>
+
+<span class="n">print</span><span class="o">(</span><span class="n">lateArg</span><span class="o">);</span> <span class="c1">// runtime error</span>
+<span class="n">lateArg</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+<span class="n">print</span><span class="o">(</span><span class="n">lateArg</span><span class="o">);</span> <span class="o">..</span> <span class="n">ok</span>
+</code></pre></div></div>
+:ET

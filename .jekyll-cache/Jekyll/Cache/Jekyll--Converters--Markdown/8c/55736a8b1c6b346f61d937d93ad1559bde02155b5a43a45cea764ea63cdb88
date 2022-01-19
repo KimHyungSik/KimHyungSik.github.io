@@ -1,0 +1,31 @@
+I"�<h2 id="모듈">모듈</h2>
+
+<p>소스 파일 및 빌드 설정으로 구성된모음, 기능 단위 별로 불활하여 사용 가능하며 각 모듈은 개별적으로 빌드, 테스트가 가능하다</p>
+
+<h2 id="생성-방법">생성 방법</h2>
+<p><img src="https://user-images.githubusercontent.com/54847106/148796064-cfcd9f98-9cf5-4d0b-91af-a606ead1fb9b.png" alt="1" />
+<img src="https://user-images.githubusercontent.com/54847106/148796081-e81568dd-577d-475e-aae5-02e53d7daac7.png" alt="2" /></p>
+
+<h2 id="모듈의-종류">모듈의 종류</h2>
+<h2 id="application">Application</h2>
+<ul>
+  <li>프로젝트에서 기본으로 생성되는 app모듈, 앱 실행을 위해 반드시 있어야한다</li>
+</ul>
+
+<h2 id="library">Library</h2>
+<ul>
+  <li>프로젝트에 모든 파일 형식으로 사용가능하다. AppCompatActivity, Context같은 안드로이드 객체에 접근이 가능하다.</li>
+</ul>
+
+<h2 id="javakotlin-library">JAVA/KOTLIN Library</h2>
+<ul>
+  <li>순수 java, kotlin 코드로 이루어진 모듈</li>
+</ul>
+
+<h2 id="장점">장점</h2>
+<ol>
+  <li>빌드시간 : 변경된 모듈만 빌드하기 때문에 빌드 시간을 단축 시킬 수 있다</li>
+  <li>관심사 분리 : 모듈간의 의존성을 줄일 수 있다. 의존성을 추가 하지 않는다면 다른 모듈의 자원에는 접근이 불가능 하다</li>
+  <li>코드 재사용 : 기능을 모듈로 관리하여 코드 재사용성을 높일 수 있다</li>
+</ol>
+:ET

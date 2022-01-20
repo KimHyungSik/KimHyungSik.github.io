@@ -15,6 +15,7 @@ https://kotlinlang.org/docs/scope-functions.html#function-selection
 
 let
 ----------
+return: 람다 결과
 not-ull 객체로 null이 아닌 값을 반환한다(null-safety)
 
 ```kt
@@ -30,31 +31,34 @@ not-ull 객체로 null이 아닌 값을 반환한다(null-safety)
 
 with
 ---------
-이미생성된 객체를 인자로 받아 사용가능 하면 결과가 필요하지 않은경우 사용하면 좋다
+return: 람다 결과
 
 ```kt
  fun <T, R> with(receiver: T, block: T.() -> R): R
  
- val value: WithValue = getWithValue()
- print(value.arg1)
- print(value.arg2)
- 
- with(value){
-   print(arg1)
-   print(arg2)
- }
+val numbers = mutableListOf("one", "two", "three")
+with(numbers) {
+    println("'with' is called with argument $this")
+    println("It contains $size elements")
+}
 ``` 
-중복되는 코드를 줄일 수 있다
+컨택스트 객체를 사용하여 함수를 호출하는 경우에 사용하는 것 을 권장한다
 
 run 
--------
-with와 비슷한 사용법을 가지고 있다
+-----
+return: 람다 결과
 
 ```kt
   fun <T, R> T.run(block: T.() -> R): R
 ```
-여러개의 변수들의 범위를 제한 하여 사용할 수 있다.
-__?:__ 를 사용하여 non-null일때만 호출 할 수있다
+컨택스트 객체를 확장 함수 처럼 사용 할 수 있다.
+```kt
+var str = run{
+  val arg = 1
+  "arg = $arg"
+}
+```
+단독으로 비확장 함수 처럼 사용할수도 있다
 
-TODO:: apply, also
+TODO:: apply, also, 관련 사용법들 
 

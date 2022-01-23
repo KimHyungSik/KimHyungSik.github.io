@@ -1,0 +1,78 @@
+---
+layout: default
+title: 구조분해 선언
+subtitle: kotlin 구조분해 선언
+categories: kotlin
+tags: [kotlin, jetpack compose]
+comments: true 
+---
+
+jetpack compose를 공부하면서 MutableState를 많이 사용하게 됩니다.
+
+MutableState 구조 확인하기
+----------
+
+```kt
+   val (text, setValue) = remember{
+          mutableStateOf("")
+      }
+      Column(
+            modifier = Modifier.fillMaxSize(),
+          verticalArrangement = Arrangement.Center,
+          horizontalAlignment = Alignment.CenterHorizontally
+      ) {
+          TextField(value = text, onValueChange = setValue)
+      }
+``` 
+이런 구조로 TextField를 구현 하고 있었습니다.
+```kt
+   val (text, setValue) = remember{
+          mutableStateOf("")
+      }
+``` 
+이부분의 두개의 변수를 받는 부분의 구현 방식이 궁긍해서 MutableState의 구현 코드를 확인했습니다.
+```kt
+@Stable
+interface MutableState<T> : State<T> {
+    override var value: T
+    operator fun component1(): T
+    operator fun component2(): (T) -> Unit
+}
+``` 
+이렇게 생긴 코드를 확인할 수 있었습니다.
+component1의 경우에는 단순 데이터를 반환 하는 함수로 확인 할 수 있습니다.
+component2의 경우 데이터를 받아 기존의 데이터를 수정하는 함수로 확인 할 수 있습니다.
+operator fun component1(),2()의 구현을 조금 살펴보면
+구조분해, Destructuring 으로 객체가 가지고 있는 여러 값을 분해해서 여러 변수에 한꺼번에 초기화 할 수 있는 방법입니다.
+
+```kt
+   val (text, setValue) = remember{
+          mutableStateOf("")
+      }
+``` 
+알고 나서 다시보면 앞의 text변수는 단순 T 자료형의 데이터를 받고 있다는 걸 알수 있고, setValue의 경우 (T) -> Unit 으로 데이터를 수정하는 함수를 변수로 받고 있음을 알게 됩니다.
+
+구조분해, Destructuring에 대해 조금 더 알아보기
+-------------
+
+comoponent는 최대 5개 까지 선언할 수 있으며 초기화 도중 사용하지 않는 변수에는 _를 사용 할 수 있습니다.
+kotlin에서 pair나 triple과 같이 사용하여 가독성 높은 코드를 작성할 수 있습니다.
+```kt
+// Pair
+val pair = Pair("text first", "text second")
+println(pair.first)
+println(pair.second)
+
+// 구조분해
+val (first, second) = Pair("text first", "text second")
+println(first)
+println(second)
+``` 
+Map의 원소를 받아 사용할 수 도 있습니다.
+```kt
+    val map = mapOf("key" to "value")
+    for((key, value) in map){
+        println(key)
+        println(value)
+    }
+``` 

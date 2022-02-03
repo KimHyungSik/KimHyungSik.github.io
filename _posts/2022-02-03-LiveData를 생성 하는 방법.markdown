@@ -1,0 +1,101 @@
+---
+layout: default
+title: LiveData를 생성 하는 방법
+subtitle: 5가지 방법을 사용 하여 LiveData를 생성하는 방법
+categories: android
+tags: [android, livedata]
+comments: true 
+---
+
+[5 Ways of Creating Android LiveData](https://medium.com/mobile-app-development-publication/5-ways-of-creating-android-livedata-fa4f87e80849)
+
+여기에서 말하는 5가지 LiveData를 만드는 방법을 참조하여 작성한 글입니다.
+
+MutableLiveData
+=====
+
+```kt
+private val _livedata = MutableLiveData<Boolean>(true)
+val livedata : LiveData<Boolean> = _livedata
+// OR
+val livedata = mutableLiveData(data)
+``` 
+
+가장 기본적으로 많이 사용 하는 LiveData사용법 입니다.
+
+SacedStateHandle
+==========
+
+```kt
+class SubViewModel(
+    val savedStateHandle: SavedStateHandle
+) : ViewModel() {
+  val livedata : LiveData<String> = savedStateHandle.getLiveData("data")
+}
+``` 
+savedStateHandel를 사용 하여 LiveData를 생성 할 수 있습니다. SavedStateHandle자동으로 데이터를 저장, 유지 하고 있으며 LiveData로 생성하여 사용 할 수있습니다.
+
+```kt
+findNavController().navigate(R.id.action_mainFragment_to_subFragment, bundleOf(
+    "data" to "SavedStateData"
+  )
+)
+``` 
+navigation을 이용하여 넘기는 데이터도 savedStateHandel로 호출하여 사용할 수 있습니다. 
+```kt
+  savedStateHandle.set("data", "ChangedData")
+``` 
+데이터를 변경해야하는 경우에는 savedStateHandle에 set함수를 이용하여 데이터를 변경하면 기존 LiveData처럼 observe를 사용하여 데이터 변경을 관찰 할 수 있습니다.
+
+LiveDataCoroutine
+==========
+
+```kt
+val coroutineLiveData : LiveData<String> = liveData {
+    emit("loading")
+    kotlinx.coroutines.delay(3000)
+    emit("success")
+    kotlinx.coroutines.delay(3000)
+}
+``` 
+LiveData코루틴 빌더입니다. suspend function등을 사용하여 코루틴 동작을 LiveData로 생성할 수 있는 방법입니다.
+```kt
+val coroutineLiveData : LiveData<String> = liveData {
+    emit(savedStateHandle.get<String>("testText") ?: "failed")
+    kotlinx.coroutines.delay(3000)
+    emit("success")
+    kotlinx.coroutines.delay(3000)
+}
+``` 
+위에서 소개드릴 savedStateHandle과 함께 사용할 수 있어 다른 화면에서 데이터를 인자로 받아 remote에 데이터를 호출하는 LiveData를 쉽게 생성 할 수 있습니다.
+코루틴 빌더를 조금 더 자세히 공부하고 싶으시면 밑의 링크로 이동 하여 확인하셔도 좋습니다.
+[5 Uses of KTX LiveData Coroutine Builder](https://medium.com/mobile-app-development-publication/5-uses-of-ktx-livedata-coroutine-builder-48b226bdd591)
+
+ Transformation of Data
+ ============
+ ```kt
+val transformedLiveData = Transformations
+    .map(sourceLiveData) { transform(it) }
+``` 
+Transformations을 이용하여 LiveData를 생성하는 방법입니다. LiveData를 사용하면서 데이터를 변환 할 수 있다는 점에서 장점이 크지만 데이터를 변환하는 작업이 MainThread에서 일어난다는 문제가 있습니다.
+(데이터 변환의 값이 크다면 문제가 될 수있습니다.)
+
+ ```kt
+val transformedLiveData = Transformations
+    .switchMap(coroutineLiveData) {
+        liveData(viewModelScope.coroutineContext + Dispatchers.IO){
+            emit(it)
+        }
+    }
+``` 
+switchMap을 이요하여 간단하게 background thread에서 동작 시킬 수 도있습니다.
+LiveData의 실행 Thread을 공부하고 싶다면 밑의 링크를 이용해 주세요.
+[Cautious: LiveData Transformation Functions are Performed in MainThread](https://medium.com/mobile-app-development-publication/cautious-livedata-transformation-functions-are-performed-in-mainthread-e58895bcf924)
+
+LiveData from StateFlow
+==========
+```kt
+val laveData = stateFlow.asLiveData()
+``` 
+마지막은 stateFlow를 LiveData로 변환시켜 사용하는방법입니다.
+stateFlow에 관해서는 다음에 작성하도록 하겠습니다.

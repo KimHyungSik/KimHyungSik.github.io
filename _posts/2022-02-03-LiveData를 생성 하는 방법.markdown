@@ -71,8 +71,8 @@ val coroutineLiveData : LiveData<String> = liveData {
 코루틴 빌더를 조금 더 자세히 공부하고 싶으시면 밑의 링크로 이동 하여 확인하셔도 좋습니다.
 [5 Uses of KTX LiveData Coroutine Builder](https://medium.com/mobile-app-development-publication/5-uses-of-ktx-livedata-coroutine-builder-48b226bdd591)
 
- Transformation of Data
- ============
+Transformation of Data
+============
  ```kt
 val transformedLiveData = Transformations
     .map(sourceLiveData) { transform(it) }

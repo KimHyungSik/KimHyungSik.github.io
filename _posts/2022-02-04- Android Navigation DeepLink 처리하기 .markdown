@@ -8,8 +8,8 @@ comments: true
 
 참고 링크 : [링크 만들기](https://developer.android.com/guide/navigation/navigation-deep-link)
 
- 명시적 딥 링크 만들기 
- ==============
+명시적 딥 링크 만들기 
+==============
  PendingIntent를 사용하여 Navigation Deep Link를 생성할 수 있습니다. 명시적 딥 링크를 사용하면 네비게이션 스택을 앱에 들어간 이후 해당 화면 으로 이동까지의 탐색을 추가 합니다.
  기본적으로 PendingIntent를 생성 할 때는 NavDeepLinkBuilder 또는 findNavController().createDeepLink()를 사용하여 createPendingIntent()를 통해 명시적인 딥링크를 생성 할 수 있습니다.
  `ComponentName`이 있으면 `.setComponentName`을 사용하여 전달 할 수 있습니다.

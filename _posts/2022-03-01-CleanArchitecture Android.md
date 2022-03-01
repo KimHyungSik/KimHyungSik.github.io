@@ -10,7 +10,7 @@ Clean Architecture
 애플리케이션을 구현할 때 상당히 많은 기능들이 들어가게 되면서 앱의 코드들이 복잡도가 증가하게 됩니다. 이후 유지보수를 하며 기능을 수정하거나 새로운 기능을 추가하면서 내부적으로 로직을 변경해야 하는 경우가 생기게된다면 복잡도가 높은 코드에서는 상당히 많은 공수가 들어가게 됩니다. 또한 복잡도가 높은 코드에서는 테스트를 진행하기도 힘들어집니다.
 
 Clean Architecture는 기능의 계층을 분리하여 관심사를 분리하는 것을 목표로 프로젝트를 진행하게됩니다. 관심사가 분리되어 코드를 간결하게 작성하면 내부로직이 변경되어야 하는 시점에서 유연하게 대처할 수 있으며 코드에 대한 테스트를 진행하기에도 유용해집니다.
-![The CleanArchitecture](../assets/images/%20Clean%20Architecture.jpg)
+![ Clean Architecture](https://user-images.githubusercontent.com/54847106/156117262-766c1a00-aad3-4b23-82a9-d368629116a6.jpg)
 [by Robert C. Martin](http://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 
 Clean Architecture는 크게 4가지 계층으로 이루어집니다. 계층들은 외부의 원들을 전혀 몰라야 한다는 의존성 규칙을 가지고 있습니다.
@@ -35,12 +35,12 @@ Drivers
 ------
 Framework, UI등의 의존성을 가지고 구현되어있다.
 
-![Android Architecture](./../assets/images/andrid-architecture.png)
+![andrid-architecture](https://user-images.githubusercontent.com/54847106/156117251-c4cf86fb-a782-408a-9179-0ec338f3ea92.png)
 [Android Developer](https://developer.android.com/jetpack/guide)
 
 Android Clean Architecture
 -------
-![Android Architecture Detail](../assets/images/Android-architecture-detail.jpeg)
+![Android-architecture-detail](https://user-images.githubusercontent.com/54847106/156117277-1a929906-da98-40d2-9b30-3908fd69e040.jpeg)
 
 Android Clean Architecture에서는 3개의 계층으로 나누어 지게됩니다. 
 Presentation -> Domain, Data -> Domain 방향으로 의존성을 갖고 있습니다.
